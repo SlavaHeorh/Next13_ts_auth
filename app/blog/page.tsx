@@ -6,9 +6,9 @@ import {getAllPosts} from "@/services/getPosts";
 import {PostSearch} from "@/components/PostSearch";
 
 
-// export const metadata: Metadata = {
-//     title: 'Blog | Next App'
-// }
+export const metadata: Metadata = {
+    title: 'Blog | Next App'
+}
 
 export default function Blog() {
     const [posts, setPosts] = useState<any[]>([])
