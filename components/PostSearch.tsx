@@ -7,7 +7,7 @@ type Props = {
     onSearch: (value: any[]) => void
 }
 
-const PostSearch = ({ onSearch }: Props) => {
+const PostSearch = ({onSearch}: Props) => {
     const [search, setSearch] = useState('')
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {

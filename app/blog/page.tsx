@@ -1,6 +1,5 @@
 'use client'
 import {Metadata} from "next";
-import Link from "next/link";
 import {useEffect, useState} from "react";
 import {Posts} from "@/components/Posts";
 import {getAllPosts} from "@/services/getPosts";
@@ -24,9 +23,9 @@ export default function Blog() {
     return (
         <>
             <h1>Blog page</h1>
-            <PostSearch onSearch={setPosts} />
+            <PostSearch onSearch={setPosts}/>
             {loading ? <h3>LOADING...</h3> : (
-                <Posts posts={posts} />
+                <Posts posts={posts}/>
             )}
         </>
     )
