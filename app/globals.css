@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -10,8 +12,13 @@ h1 {
     text-align: center;
 }
 
+body {
+    background-color: aqua;
+}
+
 .container {
-    max-width: 900px;
+    max-width: 1400px;
+    width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
     margin: 0 auto;
@@ -21,7 +28,6 @@ main {
     min-height: calc(100vh - 85px - 22px);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    background-color: aqua;
 }
 
 main a {
@@ -60,4 +66,22 @@ footer {
     align-items: center;
     height: 20px;
     background-color: lightskyblue;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    padding: 10px 8px;
+    border: 2px solid gray;
+    outline: none;
+}
+
+form button {
+    color: white;
+    border: 2px solid gray;
+    background-color: gray;
+    padding: 10px 8px;
 }
