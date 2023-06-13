@@ -1,21 +1,25 @@
 'use client'
 import Link from "next/link";
-import { useEffect } from "react";
-import {usePosts} from "@/store";
-import {shallow} from "zustand/shallow";
+import useSWR from "swr";
+import {getAllPosts} from "@/services/getPosts";
+// import { useEffect } from "react";
+// import {usePosts} from "@/store";
+// import {shallow} from "zustand/shallow";
 
 
 const Posts = () => {
-    const [posts, loading, getAllPosts] = usePosts (
-        (state) => [state.posts, state.loading, state.getAllPosts],
-        shallow
-    )
+    const {data: posts, isLoading} = useSWR('posts', getAllPosts)
 
-    useEffect(() => {
-        getAllPosts()
-    }, [getAllPosts])
+    // const [posts, loading, getAllPosts] = usePosts (
+    //     (state) => [state.posts, state.loading, state.getAllPosts],
+    //     shallow
+    // )
+    //
+    // useEffect(() => {
+    //     getAllPosts()
+    // }, [getAllPosts])
 
-    return loading ? ( <h3>LOADING...</h3>
+    return isLoading ? ( <h3>LOADING...</h3>
         ) : (
         <ul>
             {posts.map((post: any) => (
