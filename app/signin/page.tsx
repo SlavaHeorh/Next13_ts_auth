@@ -1,5 +1,5 @@
 import { GoogleButton } from "@/components/GoogleButton";
-import { SignInForm } from "@/components/SignInForm";
+import { SigninForm } from "@/components/SigninForm";
 
 export default async function Signin() {
 
@@ -8,7 +8,7 @@ export default async function Signin() {
             <h1>SignIn</h1>
             <GoogleButton />
             <div>or</div>
-            <SignInForm />
+            <SigninForm />
         </div>
     )
 }

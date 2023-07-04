@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import type { FormEventHandler } from "react"
 
-const SignInForm = () => {
+const SigninForm = () => {
 const router = useRouter()
 const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault()
@@ -33,4 +33,4 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     )
 }
 
-export {SignInForm}
+export {SigninForm}
